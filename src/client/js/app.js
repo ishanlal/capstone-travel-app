@@ -6,14 +6,14 @@ let loc_lat;
 let loc_long;
 let geo_url = 'http://api.geonames.org/postalCodeLookupJSON?placename=';
 let geo_query;
-let geo_key = `&username=${process.env.GEO_API_KEY}&lang=en`;
+let geo_key = `&username=ishanlal&lang=en`;
 let weatherbit_url_current = 'https://api.weatherbit.io/v2.0/current?lat=';
 let weatherbit_query;
-let weatherbit_current_key = `&key=${process.env.WBIT_API_KEY}&include=hourly`;
+let weatherbit_current_key = `&key=a0ce80647acc4ef5aa5158e76482fa13&include=hourly`;
 let weatherbit_url_forecast = 'https://api.weatherbit.io/v2.0/forecast/daily?&lat=';
-let weatherbit_forecast_key = `&days=17&key=${process.env.WBIT_API_KEY}`;
+let weatherbit_forecast_key = `&days=17&key=a0ce80647acc4ef5aa5158e76482fa13`;
 let pixabay_url = 'https://pixabay.com/api/?key=';
-let pixabay_key = `${process.env.PBAY_API_KEY}&q=`;
+let pixabay_key = `19951129-d99c90475dbc8f5dfd80fcb00&q=`;
 let pixabay_query;
 let apiData;
 let geoData;
@@ -51,7 +51,6 @@ function get_user_input (e) {
   s_date = document.getElementById('start').value;
   e_date = document.getElementById('end').value;
   loc_string = document.getElementById('location').value;
-  console.log("inside get user input")
   if (s_date === "" || e_date === "" || loc_string === "") {
     alert('ERROR: Kindly, key in a trip destination in format <City, State, Country> example <San Diego, CA, US> in the location field. Also, fill both trip start and trip end dates!!');
   } else {
@@ -60,12 +59,8 @@ function get_user_input (e) {
 }
 
 function get_lat_long_coordinates(e) {
-    console.log("inside get lat long coords")
     encode_string = loc_string;
     geo_query = encodeURIComponent(encode_string);
-    console.log(encode_string)
-    console.log(geo_query)
-    console.log("calling retrieve...")
     geoData = retrieveData(geo_url, geo_query, geo_key)
     .then( function(geoData){
       console.log(geoData)
