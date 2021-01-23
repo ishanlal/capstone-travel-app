@@ -1,5 +1,4 @@
 /* Global Variables */
-//var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent('red roses');
 const encodeURIComponent = require('urlencode');
 let encode_string;
 let loc_lat;
