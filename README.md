@@ -21,3 +21,12 @@
 1. Trip End date was added.
 2. Length of trip is displayed.
 3. Obscure location cases were handled: Pull in an image for the country from PixabayAPI when the entered location brings up no results.
+
+# Screenshots
+
+<img src='./homeScreen_page1.png' height='50%' width='50%' alt='Home Screen top' />
+<img src='./homeScreen_page2.png' height='50%' width='50%' alt='Home Screen bottom' />
+<img src='./travel_details_1.png' height='50%' width='50%' alt='Travel Details Screenshot' />
+<img src='./tripResults_1.png' height='50%' width='50%' alt='Trip Results Screenshot' />
+<img src='./travel_details_2.png' height='50%' width='50%' alt='Travel Details Screenshot' />
+<img src='./tripResults_2.png' height='50%' width='50%' alt='Trip Results Screenshot' />
